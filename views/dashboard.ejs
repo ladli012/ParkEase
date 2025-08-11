@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+<div id="slots" class="slots-container"></div>
+
+<!-- 🔹 1. Confirmation Modal -->
+<div id="confirmationModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeConfirmation()">&times;</span>
+    <h3 id="confirmTitle">Booking Confirmation</h3>
+    <p id="confirmDescription">Are you sure you want to book this slot?</p>
+    <button onclick="proceedToBooking()">Confirm</button>
+  </div>
+</div>
+
+<!-- 🔸 2. Full Booking Form Modal -->
+<div id="bookingModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+
+    <form id="bookingForm" onsubmit="submitBooking(event)">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="vehicle" placeholder="Vehicle Number" required />
+      
+      <label>Date:</label>
+      <input type="date" name="date" required />
+      
+      <label>From:</label>
+      <input type="time" name="fromTime" required />
+      
+      <label>To:</label>
+      <input type="time" name="toTime" required />
+      
+      <textarea name="notes" placeholder="Additional Notes (optional)"></textarea>
+
+      <p style="font-size: 14px; color: gray;">
+        <strong>Note:</strong> ₹40/hr will be charged. Delays will incur ₹100/hr fine.
+      </p>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/dashboard.js"></script>
