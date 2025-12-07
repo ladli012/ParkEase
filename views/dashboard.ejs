@@ -20,6 +20,15 @@
     <p id="modalDescription"></p>
 
     <form id="bookingForm" onsubmit="submitBooking(event)">
+
+
+      <!-- 🔹 Location Dropdown Added Here -->
+     <label for="locationSelect">Select Location:</label>
+<select id="locationSelect" name="locationId" required>
+  <option value="">Loading locations...</option>
+</select>
+
+
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="text" name="vehicle" placeholder="Vehicle Number" required />
       
@@ -34,9 +43,17 @@
       
       <textarea name="notes" placeholder="Additional Notes (optional)"></textarea>
 
+
+<!-- Hidden slot ID (auto-filled by JS when user selects a slot) -->
+<input type="hidden" id="slotId" value="">
+<!-- tempary chnage -->
+
+
       <p style="font-size: 14px; color: gray;">
         <strong>Note:</strong> ₹40/hr will be charged. Delays will incur ₹100/hr fine.
       </p>
+      <button type="button" id="payBtn">Pay ₹40</button>
+
 
       <button type="submit">Confirm Booking</button>
     </form>
@@ -47,3 +64,14 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/dashboard.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="/js/payment.js"></script>
+
+
+
+
+
+
+
+
+

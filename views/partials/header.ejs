@@ -12,8 +12,9 @@
     
     <nav class="navbar">
       <a href="/">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/faqs">FAQS</a>
       <div class="dropdown">
         <button class="dropbtn">Profile ⮟</button>
         <div class="dropdown-content">
@@ -25,4 +26,17 @@
     </nav>
   </div>
 </header>
+
+
+<script>
+  function logout() {
+    fetch('/auth/logout', { method: 'POST' })
+      .then(() => window.location.href = '/login');
+  }
+</script>
+
+
+
+
+
 

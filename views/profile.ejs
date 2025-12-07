@@ -1,0 +1,8 @@
+<%- include('partials/header') %>
+
+<h1>Welcome, <%= user.name %></h1>
+<p>Email: <%= user.email %></p>
+<p>Location: <%= user.location && user.location.address ? user.location.address : 'Not set' %></p>
+
+
+<%- include('partials/footer') %>

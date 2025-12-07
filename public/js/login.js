@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include', 
       body: JSON.stringify({ email, password }) // ✅ Updated key
     })
       .then(res => res.json())
@@ -22,3 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+
+

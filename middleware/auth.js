@@ -1,9 +1,18 @@
+
+
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const JWT_SECRET = 'your_secret_key';
 
 module.exports = async (req, res, next) => {
   try {
+
+
+     // 🔹 Debug logs inside the middleware function
+    console.log("Cookies:", req.cookies);
+    console.log("Token:", req.cookies?.token);  
+
+
     const token = req.cookies.token;
     if (!token) return res.status(401).json({ error: 'Not authenticated' });
 
@@ -17,3 +26,27 @@ module.exports = async (req, res, next) => {
     res.status(401).json({ error: 'Invalid token' });
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -158,59 +158,6 @@ body {
   background-color: #0056b3;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .slots-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -257,36 +204,6 @@ body {
   color: black;
 }
 
-/* Modal Styling */
-/* .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.close {
-  float: right;
-  font-size: 20px;
-  cursor: pointer;
-} */
-
-
-
-
 
 .modal {
   display: none;
@@ -329,4 +246,119 @@ body {
   display: none;
   position: fixed;
   /* ... baaki styling ... */
+}
+
+/* Contact Section Styling */
+.contact-section {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+}
+
+/* FAQ Accordion Styles */
+.faqs h2 {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between; /* Question left, triangle right */
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  user-select: none;
+}
+
+.triangle {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+/* Initially hide answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 10px;
+  padding-left: 5px;
+  color: #444;
+  font-weight: normal;
+}
+
+/* Active state for open answer */
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust as needed */
+}
+
+/* Rotate triangle when active */
+.faq-item.active .triangle {
+  transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+.booked {
+  background-color: red !important;
 }
